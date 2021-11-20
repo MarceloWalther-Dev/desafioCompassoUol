@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.validation.ConstraintViolationException;
+import javax.validation.UnexpectedTypeException;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.beans.TypeMismatchException;
@@ -150,7 +151,6 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler{
 		return handleExceptionInternal(ex, error, new HttpHeaders(), status, request);
 	}
 	
-
 	//Metodo sobrescrito da implementação ResponseEntityExceptionHandler, todas as exceptions tratadas pelo spring utiliza esse metodo
 	@Override
 	protected ResponseEntity<Object> handleExceptionInternal(Exception ex, Object body, HttpHeaders headers,
