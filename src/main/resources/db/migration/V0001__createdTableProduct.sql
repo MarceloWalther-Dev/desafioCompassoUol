@@ -1,0 +1,1 @@
+create table product( id bigint not null auto_increment, name varchar(60) not null, description varchar(255) not null, price double not null, primary key (id)) engine=InnoDB default charset=utf8;
