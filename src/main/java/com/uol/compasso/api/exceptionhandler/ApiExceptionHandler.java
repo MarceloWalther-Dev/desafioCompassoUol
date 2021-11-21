@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.validation.ConstraintViolationException;
-import javax.validation.UnexpectedTypeException;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.beans.TypeMismatchException;

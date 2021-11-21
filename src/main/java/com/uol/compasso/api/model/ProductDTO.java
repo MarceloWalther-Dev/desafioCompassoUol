@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.uol.compasso.domain.model.Product;
 
 @JsonInclude(Include.NON_NULL)
 public class ProductDTO {
@@ -20,13 +19,6 @@ public class ProductDTO {
 	public ProductDTO() {
 	}
 	
-	public ProductDTO(Product product) {
-		this.id = product.getId();
-		this.name = product.getName();
-		this.description = product.getDescription();
-		this.price = product.getPrice();
-	}
-
 	public Long getId() {
 		return id;
 	}

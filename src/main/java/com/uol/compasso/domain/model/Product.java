@@ -13,7 +13,6 @@ import javax.validation.constraints.PositiveOrZero;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.uol.compasso.api.model.ProductDTO;
 
 @JsonInclude(Include.NON_NULL)
 @Entity
@@ -32,15 +31,6 @@ public class Product {
 	@PositiveOrZero
 	@NotNull
 	private BigDecimal price;
-	
-	public Product() {
-	}
-	
-	public Product(ProductDTO dto) {
-		this.name = dto.getName();
-		this.description = dto.getDescription();
-		this.price = dto.getPrice();
-	}
 
 	public Long getId() {
 		return id;
@@ -89,9 +79,5 @@ public class Product {
 			return false;
 		Product other = (Product) obj;
 		return Objects.equals(id, other.id);
-	}
-	
-	public static Product convertToEntity(ProductDTO dto) {
-		return new Product(dto);
 	}
 }
