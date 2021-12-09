@@ -1,7 +1,7 @@
 # DesafioCompassoUol
 Para dar início a aplicação é necessário ter instalado o banco de dados mysql versão 5.7 na porta 3306.
 Também é possível subir o banco utilizando uma imagem docker, estou disponibilizando o comando para pull da imagem já com as configurações como senha e porta.
-docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7]
+docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
 
 ![image](https://user-images.githubusercontent.com/63797325/142744769-86d420b8-1029-4d40-b569-53c7f56b750a.png)
 
@@ -13,9 +13,11 @@ Utilizei o flyway para versionamento do banco de dados, interpretei o desafio co
 Disponibilizo também um arquivo afterMigrations.sql para aplicação subir já com alguns registros no banco de dados, não foi aperfeiçoado pois esse não era objetivo do desafio.
 
 Foi necessário utilizar uma biblioteca model mapper para conversão dos objetos, para evitar codigos boilerplates.
+
 Biblioteca apache commons para facilitar a busca da causa raiz das exceptions.
 
 Utilizei o padrão builder na model apiError para não precisar ficar gerando vários construtores.
+
 Na implementação da query dinâmica optei utilizar jpql do que criteria, por se tratar de poucos campos acredito que seria mais rápido de se desenvolver.
 
 *Alterações:
