@@ -14,11 +14,9 @@ Disponibilizo também um arquivo afterMigrations.sql para aplicação subir já 
 
 Foi necessário utilizar uma biblioteca model mapper para conversão dos objetos, para evitar codigos boilerplates.
 Biblioteca apache commons para facilitar a busca da causa raiz das exceptions.
-Utilizei o padrão builder na model apiError para não precisar ficar gerando vários construtores.
-Na implementação da query dinâmica preferi utilizar jpq do que criteria, por se tratar de poucos campos acredito que seria mais rápido de se desenvolver.
 
 Utilizei o padrão builder na model apiError para não precisar ficar gerando vários construtores.
-Na implementação da query dinâmica preferi utilizar jpq do que criteria, por se tratar de poucos campos acredito que seria mais rápido de se desenvolver.
+Na implementação da query dinâmica preferi utilizar jpql do que criteria, por se tratar de poucos campos acredito que seria mais rápido de se desenvolver.
 
 *Alterações:
 Tomei a liberdade de acrescentar mais um endpoint com o verbo PATCH caso seja necessária alteração de algum atributo do product.
